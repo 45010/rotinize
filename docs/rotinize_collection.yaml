@@ -1,0 +1,985 @@
+type: collection.insomnia.rest/5.0
+name: Rotinize HTTP Requests
+meta:
+  id: wrk_c34486d9ab0c4a669ac8b1bd0bd14294
+  created: 1760810052366
+  modified: 1760815866614
+  description: ""
+collection:
+  - name: Auth
+    meta:
+      id: fld_8afaa25dd2cf4d8393a32897f1137e2d
+      created: 1760810062378
+      modified: 1760810062378
+      sortKey: -1760810062378
+      description: ""
+    children:
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Auth/register
+        name: register
+        meta:
+          id: req_cb9fedae3757432b99d382b19bfbb9ad
+          created: 1760810121422
+          modified: 1760810249395
+          isPrivate: false
+          description: ""
+          sortKey: -1760810121422
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Usuário de Teste",
+              "email": "testuser@teste.com",
+              "senha": "teste123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Auth/login
+        name: login
+        meta:
+          id: req_ccf3d4b101724f0d81af28435408bd0e
+          created: 1760810463947
+          modified: 1760810511743
+          isPrivate: false
+          description: ""
+          sortKey: -1760810463947
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "email": "testuser@teste.com",
+              "senha": "teste123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Habits
+    meta:
+      id: fld_25a6d22c412948d481cc3864332d6beb
+      created: 1760810071272
+      modified: 1760810071272
+      sortKey: -1760810071272
+      description: ""
+    children:
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits
+        name: createHabit
+        meta:
+          id: req_b43362239b64483fbef15324cc6dd7cf
+          created: 1760813378615
+          modified: 1760815688686
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844098
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "string",
+              "description": "string",
+              "category": 0,
+              "startDate": "2025-10-18T18:50:10.137Z",
+              "endDate": "2025-10-18T18:50:10.137Z",
+              "recurrenceType": 0,
+              "specificDays": [
+                0
+              ],
+              "frequency": 0,
+              "metricType": 0,
+              "targetQuantity": 0,
+              "quantityUnit": "string",
+              "targetDuration": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits/1
+        name: getHabitById
+        meta:
+          id: req_13aec76dee9744118f1ca6b4b4af5db0
+          created: 1760814081563
+          modified: 1760815693413
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844073
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits
+        name: getHabits
+        meta:
+          id: req_3437a28ef20e4dc88061fe0b3da7c88b
+          created: 1760814178193
+          modified: 1760815691369
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844048
+        method: GET
+        parameters:
+          - id: pair_02de63eb6e64478e9bff069722e95c87
+            name: category
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_03949ff6f2f04f0d8e8ce3d139e1aa44
+            name: isActive
+            value: ""
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits/1
+        name: updateHabit
+        meta:
+          id: req_caa62db03d4c47bc9aab9ee2faf7d3de
+          created: 1760814302220
+          modified: 1760815699489
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844023
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "string",
+              "description": "string",
+              "endDate": "2025-10-18T19:04:58.576Z",
+              "recurrenceType": 0,
+              "specificDays": [
+                0
+              ],
+              "frequency": 0,
+              "metricType": 0,
+              "targetQuantity": 0,
+              "quantityUnit": "string",
+              "targetDuration": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits/1
+        name: deleteHabit
+        meta:
+          id: req_e185e3dfb4d6423cb6ccdcda0baaa1b4
+          created: 1760814343745
+          modified: 1760815704374
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844004.25
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits/1/stop
+        name: stopHabit
+        meta:
+          id: req_19bf23268d764f338fb533bc01fe21c0
+          created: 1760814387986
+          modified: 1760815702389
+          isPrivate: false
+          description: ""
+          sortKey: -1760814844010.5
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habit-tasks
+        name: getHabitTasks
+        meta:
+          id: req_c15bfde4218b4489bbdc0a23ebca7bb8
+          created: 1760814433017
+          modified: 1760815717746
+          isPrivate: false
+          description: ""
+          sortKey: -1760814677868
+        method: GET
+        parameters:
+          - id: pair_21d6296019c54227bfb8868e6499336e
+            name: category
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_f9ab127ef54e4e0d8864953ac8c7cd11
+            name: status
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_c5c27154ade142c9b3bd2488f35c0afe
+            name: startRangeDate
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_98c6363fabbb4c48bb353f8138f1755c
+            name: endRangeDate
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_e03705980bf643cda4d4e15f1f9edf70
+            name: habitId
+            value: ""
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habit-tasks/1
+        name: getHabitTaskById
+        meta:
+          id: req_3bafd9b45c7d4ce8aff287395718d905
+          created: 1760814662916
+          modified: 1760814682360
+          isPrivate: false
+          description: ""
+          sortKey: -1760814662916
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habit-tasks/1
+        name: updateHabitTaskStatus
+        meta:
+          id: req_7451d9ff15714365baee57769e461c00
+          created: 1760814692820
+          modified: 1760815727109
+          isPrivate: false
+          description: ""
+          sortKey: -1760814662816
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "status": 0,
+              "completedQuantity": 0,
+              "completedDuration": "string",
+              "addInExistent": true
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/habits/1/tasks
+        name: getTasksByHabit
+        meta:
+          id: req_57f48fe17753402ba29c4843e61fe21e
+          created: 1760814843998
+          modified: 1760815721773
+          isPrivate: false
+          description: ""
+          sortKey: -1760814670392
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Tasks
+    meta:
+      id: fld_f268f6100ba5413697378c032d882e4f
+      created: 1760810082490
+      modified: 1760810082490
+      sortKey: -1760810082490
+      description: ""
+    children:
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/single-tasks
+        name: createTask
+        meta:
+          id: req_301dec3ca5814e358017a9bacba2b89e
+          created: 1760811413770
+          modified: 1760815734182
+          isPrivate: false
+          description: ""
+          sortKey: -1760815042137
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "title": "Consulta médica",
+              "description": "Dermatologista",
+              "status": 0,
+              "dueDate": "2025-10-25T18:00:00.032Z",
+              "category": 6
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/single-tasks
+        name: getTasks
+        meta:
+          id: req_26c3a5e66cbe46fbabe1dd815f2c3b74
+          created: 1760814921040
+          modified: 1760815736410
+          isPrivate: false
+          description: ""
+          sortKey: -1760815042087
+        method: GET
+        parameters:
+          - id: pair_49a8fed620004b76ad4b3210a47323f2
+            name: category
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_82e7e9ebadbc4513a184f00e9bfa2377
+            name: status
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_95dea121317147b38137f5f9b27257a7
+            name: startRangeDate
+            value: ""
+            description: ""
+            disabled: true
+          - id: pair_750281808d574be4bdb027b76c8e0cb4
+            name: endRangeDate
+            value: ""
+            description: ""
+            disabled: true
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/single-tasks/1
+        name: getTaskById
+        meta:
+          id: req_7bea2f5c22d142debbeb590c0241672d
+          created: 1760814982518
+          modified: 1760815737835
+          isPrivate: false
+          description: ""
+          sortKey: -1760815042112
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/single-tasks/1
+        name: updateTask
+        meta:
+          id: req_13f8c7dad55440d5b986275e51fff6f9
+          created: 1760815008088
+          modified: 1760815739792
+          isPrivate: false
+          description: ""
+          sortKey: -1760815042062
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "title": "string",
+              "description": "string",
+              "dueDate": "2025-10-18T19:16:39.012Z",
+              "conclusionDate": "2025-10-18T19:16:39.012Z",
+              "status": 0
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/single-tasks/1
+        name: deleteTask
+        meta:
+          id: req_f200ae7bde5544dea874d7ebf09eabc7
+          created: 1760815042037
+          modified: 1760815059378
+          isPrivate: false
+          description: ""
+          sortKey: -1760815042037
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pomodoro
+    meta:
+      id: fld_4d523e008a89410781c3e334542c6240
+      created: 1760810092879
+      modified: 1760810092879
+      sortKey: -1760810092880
+      description: ""
+    children:
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/start
+        name: start
+        meta:
+          id: req_afa43cb1b2514645bfa24131cfef8dde
+          created: 1760815089633
+          modified: 1760815744979
+          isPrivate: false
+          description: ""
+          sortKey: -1760815146607.5
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "userId": "string",
+              "flow": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/pause/1
+        name: pause
+        meta:
+          id: req_60e0e6346ae54086b4fa4f8494adebcd
+          created: 1760815136544
+          modified: 1760815242597
+          isPrivate: false
+          description: ""
+          sortKey: -1760815136544
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/resume/1
+        name: resume
+        meta:
+          id: req_bc86d6f79ffe46f5b740f42a78a37311
+          created: 1760815158856
+          modified: 1760815750767
+          isPrivate: false
+          description: ""
+          sortKey: -1760815133612.0625
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/complete-phase/1
+        name: complete-phase
+        meta:
+          id: req_2a8969da9ecd45e38ea34c6aa9839a63
+          created: 1760815173485
+          modified: 1760815267428
+          isPrivate: false
+          description: ""
+          sortKey: -1760815124816.25
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/status/1
+        name: getStatus
+        meta:
+          id: req_d7dbb7b980004a9280cad226fc579405
+          created: 1760815176798
+          modified: 1760815756929
+          isPrivate: false
+          description: ""
+          sortKey: -1760815124716.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/stop/1
+        name: stop
+        meta:
+          id: req_f7c72968b38a423eb97e1685c470ba24
+          created: 1760815187356
+          modified: 1760815257101
+          isPrivate: false
+          description: ""
+          sortKey: -1760815130680.125
+        method: POST
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Pomodoro/history/1
+        name: getHistory
+        meta:
+          id: req_66566802a5344cf5a12d3bc12aa88846
+          created: 1760815226660
+          modified: 1760815759024
+          isPrivate: false
+          description: ""
+          sortKey: -1760815124616.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Reminders
+    meta:
+      id: fld_ab21f2f149b24de495eadc056aca3fb7
+      created: 1760810107118
+      modified: 1760810107118
+      sortKey: -1760810107118
+      description: ""
+    children:
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder
+        name: addReminder
+        meta:
+          id: req_1ca608c23fbb49be8baffd3e302d4991
+          created: 1760815346181
+          modified: 1760815772987
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627965
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "userId": "string",
+              "title": "string",
+              "description": "string",
+              "scheduledDateTime": "2025-10-18T19:22:54.797Z",
+              "frequency": 0,
+              "notify1HourBefore": true,
+              "notify30MinutesBefore": true,
+              "notify5MinutesBefore": true,
+              "notify30MinutesAfter": true,
+              "recurrenceInterval": 0,
+              "endDate": "2025-10-18T19:22:54.797Z",
+              "specificDays": "string"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1
+        name: getReminder
+        meta:
+          id: req_4cd1007ec2804095b0c7093feb9ad902
+          created: 1760815412490
+          modified: 1760815775682
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627915
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1
+        name: updateReminder
+        meta:
+          id: req_e084d40ff40f4ccc90c531ae4ec547b8
+          created: 1760815435683
+          modified: 1760815786074
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627868.125
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1
+        name: deleteReminder
+        meta:
+          id: req_3d68cc12ebfa46aea3edc1ff5dafa971
+          created: 1760815450927
+          modified: 1760815790456
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627865.3906
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/user/1
+        name: getReminderByUserId
+        meta:
+          id: req_4d37b85fa3204f62a5de7ea83868ed95
+          created: 1760815463848
+          modified: 1760815782082
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627890
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/user/1/upcoming
+        name: getUpcomingReminders
+        meta:
+          id: req_691aa5b319c0471ebcab742b4f10c078
+          created: 1760815520734
+          modified: 1760815783315
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627877.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/user/1/overdue
+        name: getOverdueReminders
+        meta:
+          id: req_89df12466d744592a01bad6f1810bbe5
+          created: 1760815542981
+          modified: 1760815784600
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627871.25
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1/complete
+        name: complete
+        meta:
+          id: req_6d37abfb9e77428ba2a680e54d29b162
+          created: 1760815593712
+          modified: 1760815787492
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627866.5625
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1/cancel
+        name: cancel
+        meta:
+          id: req_0769dd4b028a46a080a2e9247a5d96fe
+          created: 1760815613104
+          modified: 1760815789178
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627865.7812
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: https://rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net/api/Reminder/1/test-notification
+        name: testNotification
+        meta:
+          id: req_e78d4e7937e340cdae5c593512398a6a
+          created: 1760815627865
+          modified: 1760815664613
+          isPrivate: false
+          description: ""
+          sortKey: -1760815627865
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "notificationType": 0
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.3.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_e219666dcf207d02180d2ac2570c2cf32bd984bb
+    created: 1760810052369
+    modified: 1760810272415
+  cookies:
+    - key: ARRAffinity
+      value: 3adacca6c2f81875efead5591d2a8d02faa6e8843c1dd1a10e8da178ce234c0c
+      domain: rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-10-18T17:57:52.413Z
+      lastAccessed: 2025-10-18T17:57:52.413Z
+      id: b828ba31-f99e-4bd7-bc24-0ce348163d95
+    - key: ARRAffinitySameSite
+      value: 3adacca6c2f81875efead5591d2a8d02faa6e8843c1dd1a10e8da178ce234c0c
+      domain: rotinize-api-dev-c4c4c5cqc5e8gaba.brazilsouth-01.azurewebsites.net
+      path: /
+      secure: true
+      httpOnly: true
+      hostOnly: false
+      creation: 2025-10-18T17:57:52.414Z
+      lastAccessed: 2025-10-18T17:57:52.414Z
+      sameSite: none
+      id: 71c6d192-b768-4261-98a4-01adc7ad11b1
+environments:
+  name: Base Environment
+  meta:
+    id: env_e219666dcf207d02180d2ac2570c2cf32bd984bb
+    created: 1760810052368
+    modified: 1760810052368
+    isPrivate: false

@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title:
+authors:
+  - family-names: Moreira Leocadio
+    given-names: Guilherme
+  - family-names: Costa Oliveira
+    given-names: Harrison
+  - family-names: Borges
+    given-names: Isabela
+  - family-names: Rossi Broch
+    given-names: Michelle
+  - family-names: Miranda
+    given-names: Luan
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Herman Silva
+    given-names: Harison 
+keywords:
+  - habitos
+  - tarefas
+  - rotina
+  - produtividade
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-2-e3-proj-mov-t3-rotinize
+version: 1.0.0
+date-released: 2025-11-21
